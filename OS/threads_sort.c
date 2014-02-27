@@ -92,6 +92,8 @@ int main(){
 	if (pesho!=0){
 		perror("error with create");
 	}
+
+	pthread_join(threads[0],NULL);
 	
 	printf("\nPodredenata purva chast\n");
 	
@@ -104,7 +106,6 @@ int main(){
 		perror("error with create");
 	}
 	
-	pthread_join(threads[0],NULL);
 	pthread_join(threads[1],NULL);
 	
 	printf("\nPodredenata vtora chast\n");
