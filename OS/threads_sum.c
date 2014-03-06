@@ -9,7 +9,7 @@ typedef struct sized_array{
 	int *pArray;
 	int size;
 
-} array;
+};
 
 
 
@@ -21,7 +21,7 @@ int sum(array str){
 		return (str.pArray[0]+str.pArray[1]);
 	
 	}
-	return (sum(size.pArray,str.size/2)+sum(str.pArray+str.size/2,str.size/2));
+	return (sum(str.pArray,str.size/2)+sum(str.pArray+str.size/2,str.size/2));
 }
 
 int main(){
@@ -31,8 +31,10 @@ int arr[8]={1,2,3,4,5,6,7,8};
 int size=8;
 
 	
-	int s=sum(arr,size);
-	printf("%d\n",s);
+	sized_array
+	
+	//int s=sum(arr,size);
+	//printf("%d\n",s);
 
 	return 0;
 }
