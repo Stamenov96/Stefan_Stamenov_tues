@@ -11,10 +11,11 @@ void* sum(void* arg){
 	
 	while(gold_in_mine>0){
 		pthread_mutex_lock(&sum_mutex);
-		printf("worker #%d entered the mine"),(int arg));
+		printf("worker #%d entered the mine\n"),(int arg));
 		mine -= 10;
 		i+=10;
 		pthread_mutex_unlock(&sum_mutex);
+		printf("worker #%d exit the mine\n"),(int arg));
 		
 	}
 
@@ -26,16 +27,22 @@ void* sum(void* arg){
 
 
 int main(){
-
+	pthread [NUM_THREADS] threads;
+	
+	pthread_mutex_itit(&sum_mutex,NULL);
+	
+	
 	pthread_t first,second;
 	
-	pthread_create(&first,NULL,sum,NULL);
-	pthread_create(&second,NULL,sum,NULL);
+	pthread_create(&first,NULL,mine,(void*)1);
+	pthread_create(&second,NULL,mine,(void*)2);
 
 	pthread_join(first,NULL);
 	pthread_join(second,NULL);
 	
 	printf("%d\n",common);
+
+	pthread_,utex_destroy(&sum_mutex);
 	
 	return 0;
 }
