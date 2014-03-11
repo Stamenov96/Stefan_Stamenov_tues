@@ -77,7 +77,7 @@ public:
 	}
 	
 	bool operator==(const String& other) {
-		return strcmp(buffer_, other.buffer_)==0;
+		return strcmp(buffer_, other.buffer_);//==0;
 	}
 	
 	bool operator!=(const String& other) {
@@ -137,8 +137,6 @@ int main(){
 	//cout<<s1.size()<<endl;	
 	cout<<s1.length()<<endl;	
 	cout<<s2.length()<<endl;	
-	
-	
 	cout<<(s1==s2)<<endl;
 	
 	return 0;
